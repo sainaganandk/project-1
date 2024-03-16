@@ -6,7 +6,5 @@ spacy
 pandas
 numpy
 nltk
-math
-Counter
 collections
 sklearn
