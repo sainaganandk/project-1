@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIGTD - AI Generated Text Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .intro {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            animation: slide-up 0.5s ease;
+        }
+
+        .intro p {
+            margin-bottom: 15px;
+        }
+
+        .intro ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .intro ul li:before {
+            content: "\2022";
+            color: #007bff;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        form {
+            margin-bottom: 30px;
+            animation: slide-up 0.5s ease;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #007bff;
+            font-size: 18px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            resize: none;
+            font-size: 16px;
+            line-height: 1.5;
+            transition: border-color 0.3s ease;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 18px;
+            line-height: 1.5;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #output {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            animation: slide-up 0.5s ease;
+        }
+
+        #output p:first-child {
+            margin-top: 0;
+        }
+
+        #output p:last-child {
+            margin-bottom: 0;
+        }
+
+        @keyframes slide-up {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AIGTD - AI Generated Text Demo</h1>
+    </header>
+    <main>
+        <div class="intro">
+            <p>Welcome to AIGTD - AI Generated Text Demo!</p>
+            <p>AI-generated text refers to text content produced by artificial intelligence algorithms. These algorithms analyze large datasets to learn patterns and structures, enabling them to generate human-like text in various styles and contexts.</p>
+            <p>AI-generated text is being used in a variety of applications including:</p>
+            <ul>
+                <li>Content generation for websites, blogs, and social media posts</li>
+                <li>Chatbots and virtual assistants</li>
+                <li>Automated customer support</li>
+                <li>Language translation and summarization</li>
+                <li>Text-based games and storytelling</li>
+            </ul>
+            <p>Try out the demo below by entering your own text!</p>
+        </div>
+        <form id="textForm" action="{{url_for('project')}}" method="POST">
+            <label for="textInput">Enter your text:</label>
+            <textarea id="textInput" name="textInput" rows="5" placeholder="Start typing here..."></textarea>
+            <br>
+            <button type="submit">Generate</button>
+        </form>
+    </main>
+</body>
+</html>

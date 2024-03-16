@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .output-container {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .output-text {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        This is ai generated
+    </h1>
+    <div class="output-container">
+    <p>Avg_Sentence_length: {{ processed_text_1 }}</p>
+    <p>get_vocabulary_richness: {{ processed_text_2 }}</p>
+    <p>Compute_coherence: {{ processed_text_3 }}</p>
+    <p>gunning_fog: {{ processed_text_4 }}</p>
+    <p>perplexity: {{ processed_text_5 }}</p>
+    <p>shannon_entropy: {{ processed_text_6 }}</p>
+    </div>
+</body>
+</html>

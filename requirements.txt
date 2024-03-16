@@ -1,0 +1,13 @@
+textstat
+textbolb
+tensorflow
+keras
+flask
+spacy
+pandas
+numpy
+nltk
+math
+Counter
+collections
+sklearn
