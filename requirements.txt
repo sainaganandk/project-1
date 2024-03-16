@@ -6,5 +6,4 @@ spacy
 pandas
 numpy
 nltk
-collections
 sklearn
